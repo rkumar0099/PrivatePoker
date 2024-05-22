@@ -1,0 +1,27 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#header {
+    position: absolute;
+    width: 90vw;
+    height: 20vh;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info_button {
+    position: relative;
+    font-size: 16px;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}

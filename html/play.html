@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing web project</title>
+        <link rel="stylesheet" href="/css/play.css">
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="player_info">
+            <div class="info">Available Balance: $0</div>
+            <div class="info">Table Balance: $0</div>
+            <div class="info">Current Stake: $0</div>
+        </div>
+        <div class="play_room">
+            <div id="game">
+                <div id="table">
+                    <div class="table_cards">
+                        <div class="table_card"></div>
+                        <div class="table_card"></div>
+                        <div class="table_card"></div>
+                        <div class="table_card"></div>
+                        <div class="table_card"></div>
+                    </div>
+                    <div class="game_balance">Game Pot: $0</div>
+                    <div class="stakes">
+                        <p id="stake1">$0</p>
+                        <p id="stake2">$0</p>
+                        <p id="stake3">$0</p>
+                        <p id="stake4">$0</p>
+                        <p id="stake5">$0</p>
+                    </div>
+                </div>
+                <div class="wrapper" id="wrapper1">
+                    <button class="sit" id="player1">SIT</button>
+                    <div class="cards" id="cards1">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="table_balance" id="table_balance1">$1000</div>
+                    <div class="timer" id="timer1"></div>
+                </div>
+                <div class="wrapper" id="wrapper2">
+                    <button class="sit" id="player2">SIT</button>
+                    <div class="cards" id="cards2">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="table_balance" id="table_balance2">$1000</div>
+                    <div class="timer" id="timer2"></div>
+                </div>
+                <div class="wrapper" id="wrapper3">
+                    <button class="sit" id="player3">SIT</button>
+                    <div class="cards" id="cards3">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="table_balance" id="table_balance3">$1000</div>
+                    <div class="timer" id="timer3"></div>
+                </div>
+                <div class="wrapper" id="wrapper4">
+                    <button class="sit" id="player4">SIT</button>
+                    <div class="cards" id="cards4">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="table_balance" id="table_balance4">$1000</div>
+                    <div class="timer" id="timer4"></div>
+                </div>
+                <div class="wrapper" id="wrapper5">
+                    <button class="sit" id="player5">SIT</button>
+                    <div class="cards" id="cards5">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="table_balance" id="table_balance5">$1000</div>
+                    <div class="timer" id="timer5"></div>
+                </div>
+            </div>
+        </div>
+        <div id="player_actions">
+            <button class="action" onclick="clickedCheck(event)" disabled="true">CHECK</button>
+            <button class="action" onclick="clickedFold(event)" disabled="true">FOLD</button>
+            <input class="raise_amount" type="number" value="0" disabled="true"></input>
+            <button class="action" onclick="clickedRaise(event)" disabled="true">RAISE</button>
+        </div>
+        <div id="chat">
+            <div id="to">
+                <button id="choose_participant" onclick="showParticipantsList()">To</button>
+                <p id="chosen_participant">None</p>
+            </div>
+            <div id="room"></div>
+            <div id="message">
+                <textarea id="content" placeholder="Type your message here" onclick="event.target.placeholder=''"></textarea>
+                <button id="send" onclick="sendMessage(event)">Send</button>
+            </div>
+            <div id="participants_list"></div>
+        </div>
+        <div id="other_actions">
+            <button class="action" onclick="clickedLobby(event)" disabled="true">To Lobby</button>
+            <button class="action" onclick="clickedStand()" disabled="true">Stand</button>
+        </div>
+        <dialog id="dialog_box">
+            <p class="dialog_info">Available Balance: $100000</p>
+            <form>
+                <p class="err_msg">Insufficient Table Balance</p>
+                <input type="number" class="credit_amount" value="1000">
+                <div class="dialog_actions">
+                    <button class="dialog_action" onclick="join(event)">SIT</button>
+                    <button class="dialog_action" onclick="closeDialog(event)">CLOSE</button>
+                </div>
+            </form>
+        </dialog>
+    </body>
+    <script src="/scripts/play_script.js"></script>
+</html>
+
+<!--
+    load play_script after body to set default view later in script
+-->

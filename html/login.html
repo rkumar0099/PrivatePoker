@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing web project</title>
+        <link rel="stylesheet" href="./css/login.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/js/service.js"></script>
+        <script src="/scripts/login_script.js"></script>
+    </head>
+    <body>
+        <div id="header">PrivatePoker</div>
+        <div id="user_info">
+            <div id="user_info_wrapper">
+                <div id="info-form" style="position: relative; border-radius: 5%; border: transparent 1px; width: 220px; height: 350px; left: 200px;">
+                    <div id="signin_form" style="position: relative; top: 40px; visibility: visible;">
+                        <div class="info_wrapper">
+                            <label>Email</label>
+                            <br/>
+                            <input placeholder="email" class="info" id="email">
+                        </div>
+                        <div class="info_wrapper">
+                            <label>Password</label>
+                            <br/>
+                            <input placeholder="password" class="info" id="password">
+                        </div>
+                        <div id="info_buttons" style="position: relative; border-radius: 5%; border: transparent 1px; width: 175px; height: 75px; top: 60px; margin-left: 20px;">
+                            <button class="info_button" onclick="login(event)">login</button>
+                            <button class="info_button" onclick="forgotPassword(event)">Forgot Password</button>
+                        </div>
+                    </div>
+                    <div id="create_account_wrapper">
+                        <div id="create_account_form" style="position: relative; bottom: 240px; visibility: hidden;">
+                            <div class="info_wrapper">
+                                <label>Username</label>
+                                <br/>
+                                <input placeholder="username" class="info" id="username">
+                                <label style="color: red; font-size: 14px; margin-left: 45px; opacity: 0;">username not valid</label>
+                            </div>
+                            <div class="info_wrapper">
+                                <label>Email</label>
+                                <br/>
+                                <input placeholder="email" class="info" id="email">
+                            </div>
+                            <div class="info_wrapper">
+                                <label>Password</label>
+                                <br/>
+                                <input placeholder="password" class="info" id="password">
+                            </div>
+                            <div class="info_wrapper">
+                                <label>Confirm Password</label>
+                                <br/>
+                                <input placeholder="confirm password" class="info" id="confirmPassword">
+                            </div>
+                        </div>
+                        <div id="verification_link" style="position: relative; bottom: 405px; right: 155px; border: solid 1px; border-radius: 5%; padding-left: 10px; padding-top: 10px; font-size: 14.5px; width: 500px; height: 50px; visibility: hidden">
+                            Verification link has been sent to your email address. Verify your email address by clicking on the link. The link is only valid for 10 minutes.
+                        </div>
+                    </div>
+                    <div id="forgot_password_wrapper">
+                        <div id="forgot_password_form" style="position: relative; bottom: 480px; right: 10px; visibility: hidden;">
+                            <div class="info_wrapper">
+                                <label>Email</label>
+                                <br/>
+                                <input placeholder="email" class="info" id="email">
+                            </div>
+                            <div id="send_link" style="position: relative; top: 100px; left: 10px; border: transparent 1px;">
+                                <button class="info_button" onclick="sendLink(event)">Send Link</button>
+                            </div>
+                        </div>
+                        <div id="reset_password_link" style="position: relative; bottom: 575px; left: -150px; border: solid 1px; border-radius: 5%; padding-left: 10px; font-size: 14.5px; width: 500px; height: 50px; visibility: hidden">
+                            Reset password link has been sent to your email address. Reset your password by clicking on the link.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative; width: 570px; left: 35px; color: red; text-align: center; border: solid 1px; font-size: 14.5px; opacity: 0;">please enter email/password</div>
+        </div>
+        <div id="user_actions">
+            <button class="login_button" id="signin" onclick="signin(event)">signin</button>
+            <button class="login_button" id="create_account" onclick="createAccount(event)">create account</button>
+        </div>
+        <div id="submit_form" style="position: absolute; left: 480px; top: 475px; border: transparent 1px;">
+            <button class="info_button" style="opacity: 0;" onclick="submitForm(event)">Submit</button>
+        </div>
+    </body>
+
+</html>

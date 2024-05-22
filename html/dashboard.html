@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PrivatePoker Dashboard</title>
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/js/service.js"></script>
+        <script src="/scripts/dashboard_script.js"></script>
+    </head>
+    <body>
+        <div id="player_info">
+            <div class="info">Available Balance: $0</div>
+            <div id="invites_wrapper">
+                <div id="invite_wrapper">
+                    <button id="invite_button" onmouseover="showInvites()" onmouseleave="hideInvites()">requests</button>
+                    <div id="invite_count">1</div>
+                </div>
+                <div id="invites_list" onmouseover="showInvites()" onmouseleave="hideInvites()">
+                    <div class="invite">
+                        <div class="invite_name">abc</div>
+                        <button class="common_button accept">accept</button>
+                        <button class="common_button reject">reject</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="user_tables">
+            <div class="room_type">
+                <button class="room_button" onclick="publicRooms()">public rooms</button>
+                <button class="room_button" onclick="privateRooms()">private rooms</button>
+            </div>
+            <div class="room_list" id="public_rooms">
+                <div class="room"></div>
+                <div class="room"></div>
+                <div class="room"></div>
+                <div class="room"></div>
+                <div class="room"></div>
+                <div class="room"></div>
+                <div class="room"></div>
+                <div class="room"></div>
+            </div>
+            <div class="room_list" id="private_rooms">
+                <div class="room"></div>
+            </div>
+        </div>
+        <div id="friends_list">
+            <div id="friends_list_wrapper">
+                <div class="friend_profile">
+                    <div class="picture"></div>
+                    <div class="name">abc</div>
+                    <div class="balance">$0</div>
+                </div>
+            </div>
+        </div>
+        <div id="active_friends_list"></div>
+        <div id="player_actions">
+            <button class="info_button">credit</button>
+            <button class="info_button">withdraw</button>
+        </div>
+        <div id="search_user">
+            <input id="search_bar" placeholder="search by username/email" onkeypress="handleSearch(event)">
+            <div id="search_result" style="visibility: hidden;">
+                <div id="search_name">rabindar</div>
+                <div id="search_status">
+                    <button class="common_button friend" onclick="clickedAdd(event)">friend</button>
+                    <button class="common_button cancel">cancel</button>
+                </div>
+            </div>
+            <div id="search_error" class="error_bar" style="visibility: hidden;">Searching for user</div>
+        </div>
+    </body>
+</html>

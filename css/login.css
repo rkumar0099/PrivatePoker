@@ -1,0 +1,116 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#header {
+    position: absolute;
+    width: 90vw;
+    height: 20vh;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#user_info {
+    position: absolute;
+    left: 225px;
+    top: 50px;
+    text-align: center;
+    width: 52vw;
+    height: 72vh;
+    margin-left: 25px;
+    border-radius: 5%;
+    border: solid 2px;
+}
+
+#user_info_wrapper {
+    position: relative;
+    text-align: left;
+    width: 600px;
+    height: 360px;
+    border: solid 1px;
+    border-radius: 5%;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: whitesmoke;
+}
+
+.info_wrapper {
+    position: relative;
+    width: 200px;
+    height: 62px;
+    border: solid 1.5px;
+    border-radius: 10%;
+    top: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: antiquewhite;
+    font-size: 16px;
+}
+
+.info {
+    font-size: 14.5px;
+    margin-top: 5px;
+    border-radius: 10%;
+    border-color: azure;
+}
+
+.info_button {
+    position: relative;
+    font-size: 16px;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+#user_actions {
+    position: absolute;
+    width: 13vw;
+    height: 14vh;
+    border: transparent 2px;
+    border-radius: 5%;
+    left: 1050px;
+    top: -4px;
+}
+
+.login_button {
+    position: relative;
+    font-size: 16px;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-left: 5px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+/*
+#create_account {
+    left: 1030px;
+    bottom: 18px;
+}
+*/
+
+.login_button:hover {
+    background-color: bisque;
+}
+
+.create_account {
+    position: relative;
+}
+
+.submit_form {
+
+}

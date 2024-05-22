@@ -1,0 +1,367 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#player_info {
+    position: absolute;
+    display: flex;
+    width: 74vw;
+    height: 8vh;
+    border: solid 1px;
+    border-radius: 5%;
+    left: 25px;
+}
+
+.info {
+    position: relative;
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#user_tables {
+    position: absolute;
+    width: 30vw;
+    height: 45vh;
+    top: 100px;
+    left: 340px;
+    border: solid 2px;
+}
+
+#friends_list {
+    position: absolute;
+    width: 55vw;
+    height: 25vh;
+    left: 200px;
+    top: 380px;
+    border: solid 2px;
+}
+
+#active_friends_list {
+    position: absolute;
+    width: 15vw;
+    height: 50vh;
+    left: 850px;
+    top: 80px;
+    border: solid 2px;
+}
+
+#player_actions {
+    position: absolute;
+    width: 14vw;
+    height: 12vh;
+    border: transparent 2px;
+    left: 1030px;
+}
+
+#search_user {
+    position: absolute;
+    width: 20vw;
+    height: 26vh;
+    top: 100px;
+    margin-left: 10px;
+    border: solid 2px;
+    border-radius: 5%;
+}
+
+#search_bar {
+    position: relative;
+    width: 240px;
+    height: 25px;
+    border-radius: 5%;
+    margin-top: 2.5px;
+    margin-left: 5px;
+    border: solid 2px;
+    border-color: whitesmoke;
+    font-size: 14.5px;
+}
+
+.info_button {
+    position: relative;
+    font-size: 16px;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.room_type {
+    position: relative;
+    display: flex;
+    width: 275px;
+    height: 30px;
+    border: solid 2px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.room_button {
+    position: relative;
+    width: 100px;
+    height: 25px;
+    border: solid 1px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 2.5px;
+}
+
+.room_list {
+    position: relative;
+    width: 275px;
+    height: 190px;
+    border: solid 1px;
+    margin-left: 5px;
+    margin-top: 7.5px;
+    border-radius: 5%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.room {
+    position: relative;
+    width: 200px;
+    height: 25px;
+    border: solid 1px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#public_rooms {
+    visibility: visible;
+}
+
+#private_rooms {
+    bottom: 200px;
+    visibility: hidden;
+    height: 100px;
+}
+
+#friends_list_wrapper {
+    position: relative;
+    width: 500px;
+    height: 100px;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: solid 1px;
+}
+
+.friend_profile {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    border: solid 1px;
+    border-radius: 5%;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.picture {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    background-image: url("/images/empty_profile.webp");
+    background-size: cover;
+    margin-top: 2px;
+}
+
+.name {
+    position: relative;
+    width: 59px;
+    height: 15px;
+    font-size: 14.5px;
+    left: 15px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.balance {
+    position: relative;
+    width: 59px;
+    height: 15px;
+    font-size: 14.5px;
+    left: 15px;
+    margin-top: 4px;
+    text-align: center;
+
+}
+
+#search_result {
+    position: relative;
+    width: 230px;
+    height: 45px;
+    display: flex;
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-left: 7px;
+    background-color: gainsboro;
+    border: transparent 1px;
+}
+
+#search_status {
+    position: relative;
+    width: 55px;
+    height: 28px;
+    display: flex;
+    border-radius: 5px;
+    margin-top: 7.5px;
+}
+
+#search_name {
+    position: relative;
+    width: 100px;
+    height: 28px;
+    border-radius: 10%;
+    border: transparent 1px;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 16.5px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.error_bar {
+    position: relative;
+    width: 100%;
+    height: 18%;
+    border: solid 1px;
+    border-radius: 5%;
+    font-size: 14.5px;
+    margin-top: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#invites_wrapper {
+    position: absolute;
+    width: 12vw;
+    height: 8vh;
+    border: transparent 1px;
+    left: 730px;
+}
+
+#invite_wrapper {
+    position: relative;
+    left: 75px;
+}
+
+#invite_button {
+    position: relative;
+    width: fit-content;
+    height: 30px;
+    border: transparent 0.5px;
+    border-radius: 5%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    font-size: 14.5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#invite_count {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 2px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+#invites_list {
+    position: relative;
+    width: 230px;
+    height: 150px;
+    border: transparent 1px;
+    border-radius: 5%;
+    visibility: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: gainsboro;
+}
+
+.invite {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 20%;
+    border-radius: 25px;
+    margin-top: 5px;
+    border: transparent 1px;
+    background-color: gainsboro;
+}
+
+.invite_name {
+    position: relative;
+    width: 75px;
+    height: 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-left: 1px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.common_button {
+    position: relative;
+    width: fit-content;
+    height: 25px;
+    border: solid 1px;
+    border-radius: 14.5px;
+    background-color: lightgreen;
+    font-size: 14.5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;   
+}
+
+.accept {
+    margin-left: 5px;
+    background-color: lightgreen;
+}
+
+.reject {
+    margin-left: 5px;
+    background-color: rgb(250, 42, 42);
+}
+
+.friend {
+    margin-left: 5px;
+    background-color: lightgreen;
+}
+
+.you {
+    margin-left: 5px;
+    background-color: lightgreen;
+}
+
+.remove {
+    margin-left: 5px;
+    background-color: rgb(250, 42, 42);
+}
+
+.cancel {
+    margin-left: 5px;
+    background-color: ghostwhite
+}
+
+.add_friend {
+    margin-left: 5px;
+    background-color: rgb(235, 53, 53);
+}
